@@ -3,7 +3,7 @@ UPPER_ALPHABETS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 def writeFile(Filename: str, Content: str):
-    open(filename, 'w', encoding='UTF-8')
+    open(Filename, 'w', encoding='UTF-8')
     file.write(Content)
     file.close()
 
