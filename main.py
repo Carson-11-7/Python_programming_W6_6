@@ -9,13 +9,13 @@ def writeFile(Filename: str, Content: str):
 
 
 def askRows() -> str:
-    rows = []
+    content = ""
     while True:
         row = input("Insert row(empty stops): ")
         if len(row) == 0:
             break
-        rows.append(row)
-    return "\n".join(rows)
+        content += row + "\n"
+    return content
 
 
 def shiftCharacter(Character: str, Alphabets: str, Shift: int = 13) -> str:
@@ -45,12 +45,12 @@ def main() -> None:
 
     print()
     print("#### Ciphered text ####")
-    print(ciphered)
+    print(ciphered, end="")
     print()
     print("#### Ciphered text ####")
 
     filename = input("Insert filename to save: ")
-    writeFile(filename, ciphered + "\n")
+    writeFile(filename, ciphered)
 
     print("Ciphered text saved!")
     print("Program ending.")
